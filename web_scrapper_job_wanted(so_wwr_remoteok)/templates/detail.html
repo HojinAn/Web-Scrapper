@@ -1,0 +1,31 @@
+    <!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Romote Jobs
+  </title>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <header>
+    <h1>Romote Jobs</h1>
+    <h3>{{number}} {{term}} jobs found.</h3>
+    <h4><a href="/export_to_csv?term={{term}}" name="term" id="term">Export to CSV</a></h4>
+    <h5><a href="/">← Go back</a></h5>
+  </header>
+  <main>
+    {% for data in datas %}
+      <div>
+          <h3>{{data.title}}</h3>
+          <h4>{{data.company}}</h4>
+          <h4><a href="{{data.link}}" target="_blank">Apply</a></h4>
+        <hr />
+      </div>
+    {% endfor%}
+  </main>  
+
+</body>
+
+</html>
